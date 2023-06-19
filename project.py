@@ -24,7 +24,7 @@ uploaded_file = st.file_uploader("Upload a text file", type=["txt"])
 
 if uploaded_file is not None:
     text = uploaded_file.read().decode("utf-8")
-    text = st.text_area("Text Input", value=text)
+    #text = st.text_area("Text Input", value=text)
     
 
 # Select voice
