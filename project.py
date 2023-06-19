@@ -3,7 +3,7 @@ import pyttsx3
 import base64
 
 # Initialize the text-to-speech engine
-engine = pyttsx3.init()
+engine = pyttsx3.init('espeak')
 
 # Get available voices
 voices = engine.getProperty('voices')
