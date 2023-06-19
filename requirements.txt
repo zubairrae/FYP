@@ -1,3 +1,2 @@
-comtypes
-espeak
+
 pyttsx3
