@@ -1,4 +1,2 @@
 comtypes
 pyttsx3
-
-pywin32
