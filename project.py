@@ -2,8 +2,11 @@ import streamlit as st
 import pyttsx3
 import base64
 
-# Initialize the text-to-speech engine
-engine = pyttsx3.init('sapi5')
+try:
+    engine = pyttsx3.init()
+except Exception as e:
+    st.error("Failed to initialize the text-to-speech engine: {}".format(str(e)))
+    st.stop()
 
 # Get available voices
 voices = engine.getProperty('voices')
