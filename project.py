@@ -1,7 +1,7 @@
 import streamlit as st
 import pyttsx3
 import base64
-
+from _ctypes import COMError
 # Initialize the text-to-speech engine
 engine = pyttsx3.init('sapi5')
 
