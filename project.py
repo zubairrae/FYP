@@ -3,7 +3,7 @@ import pyttsx3
 import base64
 
 try:
-    engine = pyttsx3.init(driver='sapi5')
+    engine = pyttsx3.init('sapi5')
 except Exception as e:
     st.error("Failed to initialize the text-to-speech engine: {}".format(str(e)))
     st.stop()
