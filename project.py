@@ -19,11 +19,12 @@ if uploaded_file is not None:
 
 # Convert text to speech
 if st.button("Convert to Speech"):
-    tts = gTTS(text)
-    fp = BytesIO()
-    tts.save(fp)
-    fp.seek(0)
-    audio_bytes = fp.read()
+    engine.save_to_file(text, "speech.mp3")
+    engine.runAndWait()
+
+    # Read the generated audio file
+    audio_file = open("speech.mp3", "rb")
+    audio_bytes = audio_file.read()
     st.audio(audio_bytes, format="audio/mp3")
 
     # Create a download link for the audio file
